@@ -1,2 +1,6 @@
-n = input()
-print(n,1)
+n = int(input())
+print("hello",n)
+if(n==5):
+    print("Anand")
+else:
+    print("Bhanu") 

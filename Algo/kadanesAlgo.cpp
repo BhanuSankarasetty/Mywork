@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include <climits>
+#include<stack>
 using namespace std;
 int Kadanes(vector<int> &arr){
     int sum = 0;
@@ -9,13 +12,24 @@ int Kadanes(vector<int> &arr){
         if(sum<0){
             sum = 0;
         }
-
     }
     return mx;
 }
 int main(){
-    vector<int>arr = {1,2,-9,6,43,-6,3,-7,-34,-40};
+    vector<int> arr;
+    int x;
+
+    cout << "Enter numbers (type any non-integer to stop):" << endl;
+    while (cin >> x) {
+        arr.push_back(x);
+    }
+
+    if (arr.empty()) {
+        cout << "No numbers entered. Exiting..." << endl;
+        return 0;
+    }
     int ans = Kadanes(arr);
+    cout<<"Ans by using Kadane's algo is : " ;
     cout<<ans<<endl;
     return 0;
 }
