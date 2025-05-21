@@ -7,7 +7,7 @@ public class Main {
         String name;
         name = scanner.nextLine();
         System.out.println("Hello, " + name + "! Welcome to Java.");
-        System.out.println("Bhanu"); 
+        System.out.println("Nice to meet you Have a good day!"); 
         scanner.close();
     }
 }

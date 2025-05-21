@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run C++",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "HelloWorld.cpp",
+        "-o",
+        "HelloWorld"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "run HelloWorld",
+      "type": "shell",
+      "command": "./HelloWorld",
+      "dependsOn": "build and run C++",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}
